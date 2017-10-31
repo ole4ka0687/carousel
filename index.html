@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="carousel-block/carousel.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <script src="carousel-block/carousel.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="carousel"></div>
+
+    <script type="text/template" id="carousel-template">
+        <button class="carousel__button carousel__button--prev">⇦</button>
+        <div class="carousel__gallery">
+            <ul class="carousel__list">
+                <% images.forEach((imageUrl) => { %>
+                    <li><img src="<%= imageUrl %>"></li>
+                <% }) %>
+            </ul>
+        </div>
+        <button class="carousel__button carousel__button--next">⇨</button>
+    </script>
+
+</body>
+</html>
